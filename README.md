@@ -44,11 +44,27 @@ Como pretende-se otimizar e facilitar as consultas na base de dados que será de
 
 9. Um participante pode ter zero ou vários artigos publicados;
 
-10. Existe o administrador do sistema, que é um participante com privilégios especiais: pode classificar qualquer participante cadastrado como avaliador de artigos científicos. 
+10. Existe o administrador do sistema, que é um participante com privilégios especiais: pode classificar qualquer participante cadastrado como avaliador de artigos e/ou avaliador de eventos.
 
-11. Deve ser possível contabilizar a quantidade total de artigos aprovados e a quantidade total de artigos recusados pelos participantes avaliadores;
+11. Deve ser possível contabilizar a quantidade total de artigos aprovados e a quantidade total de artigos recusados pelos participantes avaliadores de artigos;
 
-12. O evento científico contém nome, tipo (congresso, conferência, curso, encontro, fórum, jornada, mesa-redonda, seminário, simpósio ou workshop), data de realização, horário de começo, horário de termino, endereço (país, estado, cidade, logradouro, bairro, CEP, número e complemento), data máxima de inscrição, descrição, valor, formas de pagamento (cartão de crédito, boleto ou transferência bancária) e número máximo de pariticipantes permitido.
+12. Deve ser possível contabilizar a quantidade total de eventos aprovados e a quantidade total de eventos recusados pelos participantes avaliadores de eventos;
+
+12. Deve haver o ranqueamento dos artigos científicos aprovados, a partir da conferência de zero a cinco estrelas pelos participantes;
+
+13. Participantes podem conferir estrelas a zero ou vários artigos;
+
+14. O ranque de um artigo científico é calculado pela média de estrelas que o mesmo recebeu;
+
+15. Organizações possuem os dados: CNPJ, nome, imagem (logo), telefone e descrição; 
+
+15. O evento científico contém nome, tipo (congresso, conferência, curso, encontro, fórum, jornada, mesa-redonda, seminário, simpósio ou workshop), data de realização, horário de começo, horário de termino, endereço (país, estado, cidade, logradouro, bairro, CEP, número e complemento), data máxima de inscrição, descrição, valor, formas de pagamento (cartão de crédito, boleto ou transferência bancária) e número máximo de pariticipantes permitido.
+
+16. Participantes executam zero ou vários eventos científicos;
+
+17. 
+
+16. Organizações organizam zero ou vários eventos científicos;
 
 
 
