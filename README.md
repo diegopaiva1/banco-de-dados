@@ -18,7 +18,7 @@ Este documento propõe o modelo de uma base dados que visa sanar as principais d
 *  Realizar emissão de ingressos por participante;
 *  Emitir certificados para os participantes referentes aos eventos;
 *  Localizar instiuições de ensino onde ocorrem eventos;
-*  Identificar organizadores dos eventos.
+*  Identificar os organizadores dos eventos.
 
 Bem como outros relacionamentos que possam vir a enriquecer o projeto.
 
@@ -28,7 +28,7 @@ Como pretende-se otimizar e facilitar as consultas na base de dados que será de
 
 1. Instituiçoes de ensino contém código, sigla e nome;
 
-2. Todo usuário do sistema é classificado como um participante. Participantes possuem os dados: CPF, nome, data de nascimento, e-mail,  e senha;
+2. Todo usuário do sistema é classificado como um participante. Participantes possuem os dados: CPF, nome, data de nascimento, e-mail e senha;
 
 3. Um participante pertence a zero ou apenas uma instituição de ensino;
 
@@ -60,30 +60,22 @@ Como pretende-se otimizar e facilitar as consultas na base de dados que será de
 
 15. O evento científico contém nome, tipo (congresso, conferência, curso, encontro, fórum, jornada, mesa-redonda, seminário, simpósio ou workshop), data de realização, horário de começo, horário de termino, endereço (país, estado, cidade, logradouro, bairro, CEP, número e complemento), data máxima de inscrição, descrição, valor, formas de pagamento (cartão de crédito, boleto ou transferência bancária) e número máximo de pariticipantes permitido.
 
-16. Participantes executam zero ou vários eventos científicos;
+16. Participantes são responsáveis por zero ou vários eventos científicos;
 
-17. 
+17. Organizações organizam zero ou vários eventos científicos;
 
-16. Organizações organizam zero ou vários eventos científicos;
+18. Eventos científicos tratam sobre uma área do conhecimento e zero ou várias subáreas;
 
+19. Eventos científicos possuem relação de indicação com zero ou um artigo científico;
 
+20. Eventos científicos ocorrem em zero ou uma instituição de ensino;
 
-7. O sistema deverá permitir ao participante criar evento como palestrante, a partir dos dados: nome, tipo (congresso, conferência, curso, encontro, fórum, jornada, mesa-redonda, seminário, simpósio ou workshop), data de realização, área do conhecimento, co-palestrantes (selecionando participantes pré-cadastrados no sistema), horário de começo, horário de término, local (país, estado, cidade, logradouro, bairro, CEP, número e complemento), artigo cientifico relacionado (se houver - selecionando a partir de artigos aprovados), data máxima de inscrição, descrição, valor, formas de pagamento (cartão de crédito, boleto ou transferência bancária), e número máximo de participantes.
+21. Um participante pode se inscrever em zero ou mais eventos;
 
-8. O sistema deverá permitir ao usuário realizar inscrição em um evento, emitindo um ingresso contendo os dados: código, nome do participante, nome do evento, valor, status do pagamento (aguardando aprovação, aprovado ou recusado), forma de pagamento e data de emissão.
+22. A inscrição de um participante em um evento gera um ingresso, contendo os dados: código, valor, status do pagamento ("aguardando aprovação", "aprovado" ou "recusado"), forma de pagamento e data da inscrição;
 
-9. O sistema deverá permitir ao participante gerar um certificado de um evento que o mesmo participou, contendo os dados: nome do evento, nome do participante, data de realização do evento e carga horária (calculado a partir do horário de inicio e término do evento).
+23. Um evento gera um certificado único referente ao próprio evento para o participante que se inscreveu e participou;
 
-10. O sistema deverá permitir ao participante visualizar e editar seus dados pessoais e cadastrais.
+24. O certificado deve conter a carga horária total, calculada a partir do horário de inicio e horário de término do evento;
 
-11. O sistema deverá permitir ao participante visualizar uma lista com todos os artigos científicos disponíveis.
-
-12. O sistema deverá permitir ao participante visualizar todos seus artigos publicados no sistema.
-
-13. O sistema deverá permitir ao participante visualizar uma lista com todos os eventos disponíveis (que ainda irão ocorrer).
-
-14. O sistema deverá permitir ao participante visualizar todos os eventos em que está inscrito e todos os eventos que já participou.
-
-15. O sistema deverá permitir ao participante consultar seu ingresso de acesso para todos os eventos em que está inscrito e eventos que já participou.
-
-16. O sistema deverá permitir ao participante visualizar uma lista com todos os seus certificados.
+25. Um evento é dado como encerrado se sua data de realização já se passou. 
