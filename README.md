@@ -12,28 +12,45 @@ Este documento propõe o modelo de uma base dados que visa sanar as principais d
 
 *  Incluir artigos científicos para divulgação;
 *  Avaliação de artigos;
-*  Catalogar eventos por àrea do conhecimento e localidade;
+*  Ranquear artigos;
+*  Catalogar eventos por àrea do conhecimento, localidade e tipo;
 *  Controlar as inscrições dos participantes nos eventos;
 *  Realizar emissão de ingressos por participante;
 *  Emitir certificados para os participantes referentes aos eventos;
-*  Localizar universidades onde ocorrem eventos;
+*  Localizar instiuições de ensino onde ocorrem eventos;
 *  Identificar organizadores dos eventos.
 
 Bem como outros relacionamentos que possam vir a enriquecer o projeto.
 
-## Requisitos do projeto 
+## Requisitos do projeto
 
-1. O sistema deverá permitir cadastro de participantes no sistema, a partir dos dados: nome, data de nascimento, e-mail e senha.
+Como pretende-se otimizar e facilitar as consultas na base de dados que será desenvolvida, é necessário que algumas regras e requisitos sejam atendidos. São estes:
 
-2. O sistema deverá permitir o login de participantes no sistema, a partir do dados: e-mail e senha.
+1. Instituiçoes de ensino contém código, sigla e nome;
 
-3. O sistema deverá permitir ao administrador realizar o cadastro de áreas do conhecimento, a partir do dados: área pai (se houver) e nome.
+2. Todo usuário do sistema é classificado como um participante. Participantes possuem os dados: CPF, nome, data de nascimento, e-mail,  e senha;
 
-4. O sistema deverá permitir ao participante enviar um artigo cientifico, a partir dos dados: título, resumo, co-autores (selecionando participantes pré-cadastrados e, caso um dos co-autores não seja cadastrado, informar o nome do mesmo), arquivo (contendo o artigo em si em formato PDF), área do conhecimento (selecionando a partir de áreas pré-cadastradas) e status (aguardando aprovação, aprovado ou recusado - todos os artigos cadastrados são inicialmente classificados como aguardando aprovação).
+3. Um participante pertence a zero ou apenas uma instituição de ensino;
 
-5. O sistema deverá permitir ao administrador selecionar um participante cadastrado e classificá-lo como avaliador de artigos.
+4. Áreas do conhecimento possuem código, área pai (se houver) e nome;
 
-6. O sistema deverá permitir a um participante avaliador aprovar ou recusar artigos que estão aguardando aprovação.
+5. Uma área do conhecimento é classificada como subárea se contem uma área pai;
+
+6. Artigos científicos contém título, resumo, arquivo (que é o artigo em si) e status ("aguardando aprovação", "aprovado" ou "recusado" - todos os artigos são inicialmente classificados como "aguardando aprovação").
+
+7. Artigos científicos possuem relação de autoria com participantes cadastrados na plataforma. Cada artigo possui um único autor ou vários autores;
+
+8. Artigos científicos são de uma única área do conhecimento e de zero ou várias subáreas;
+
+9. Um participante pode ter zero ou vários artigos publicados;
+
+10. Existe o administrador do sistema, que é um participante com privilégios especiais: pode classificar qualquer participante cadastrado como avaliador de artigos científicos. 
+
+11. Deve ser possível contabilizar a quantidade total de artigos aprovados e a quantidade total de artigos recusados pelos participantes avaliadores;
+
+12. O evento científico contém nome, tipo (congresso, conferência, curso, encontro, fórum, jornada, mesa-redonda, seminário, simpósio ou workshop), data de realização, horário de começo, horário de termino, endereço (país, estado, cidade, logradouro, bairro, CEP, número e complemento), data máxima de inscrição, descrição, valor, formas de pagamento (cartão de crédito, boleto ou transferência bancária) e número máximo de pariticipantes permitido.
+
+
 
 7. O sistema deverá permitir ao participante criar evento como palestrante, a partir dos dados: nome, tipo (congresso, conferência, curso, encontro, fórum, jornada, mesa-redonda, seminário, simpósio ou workshop), data de realização, área do conhecimento, co-palestrantes (selecionando participantes pré-cadastrados no sistema), horário de começo, horário de término, local (país, estado, cidade, logradouro, bairro, CEP, número e complemento), artigo cientifico relacionado (se houver - selecionando a partir de artigos aprovados), data máxima de inscrição, descrição, valor, formas de pagamento (cartão de crédito, boleto ou transferência bancária), e número máximo de participantes.
 
