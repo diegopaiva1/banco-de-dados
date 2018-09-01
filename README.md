@@ -4,7 +4,20 @@ Trabalho da disciplina DCC060 - Banco de dados
 
 ## Introdução
 
-Eventos científicos precisam de um sistema para que os usuários possam enviar artigos, avaliadores possam avaliar esses artigos, controle de pagamento das inscrições, etc. Todos os requisitos necessários estão especificados na seção abaixo.
+O Brasil, apesar das dificuldades enfrentadas, é um pais com uma enorme comunidade científica e que conta com uma grande diversidade de eventos científicos nas mais variadas áreas, indo desde as Ciências Humanas até as Ciências Exatas e Engenharias.
+Uma vez que tais eventos, devido à grande extensão do nosso país, ocorrem de maneira paralela e em diversos estados diferentes, enxerga-se a necessidade de tornar a divulgação destes eventos científicos mais abrangente e centralizada. Partindo desta premissa, participantes de eventos científicos terão maior facilidade para buscar eventos de seus interesses em suas regiões, enquanto que palestrantes e organizações poderão divulgar e detalhar com mais propriedade seus eventos científicos. 
+Este documento propõe o modelo de uma base dados que visa sanar as principais dificuldades deste cenário de aplicação, oferecendo aos participantes da plataforma meios para que possam contribuir com o desenvolvimento e divulgação científica nacional. A partir da implantação desta base de dados, pretende-se:
+
+*  Incluir artigos científicos para divulgação;
+*  Avaliação de artigos;
+*  Catalogar eventos por àrea do conhecimento e localidade;
+*  Controlar as inscrições dos participantes nos eventos;
+*  Realizar emissão de ingressos por participante;
+*  Emitir certificados para os participantes referentes aos eventos;
+*  Localizar universidades onde ocorrem eventos;
+*  Identificar organizadores dos eventos.
+
+Bem como outros relacionamentos que possam vir a enriquecer o projeto.
 
 ## Requisitos do projeto 
 
