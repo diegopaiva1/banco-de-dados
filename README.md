@@ -28,7 +28,7 @@ Como pretende-se otimizar e facilitar as consultas na base de dados que será de
 
 1. Instituiçoes de ensino contém código, sigla e nome;
 
-2. Todo usuário do sistema é classificado como um participante. Participantes possuem os dados: CPF, nome, data de nascimento, e-mail e senha;
+2. Participantes possuem os dados: CPF, nome, data de nascimento, e-mail e senha;
 
 3. Um participante pertence a zero ou apenas uma instituição de ensino;
 
