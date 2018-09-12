@@ -72,7 +72,7 @@ Como pretende-se otimizar e facilitar as consultas na base de dados que será de
 
 23. Eventos aceitam uma ou várias formas de pagamentos;
 
-24. Eventos científicos podem ou não ocorrer em uma instituição de ensino;
+24. Eventos podem ou não ocorrer em uma instituição de ensino;
 
 25. Palestrantes ministram zero ou vários eventos;
 
@@ -82,23 +82,16 @@ Como pretende-se otimizar e facilitar as consultas na base de dados que será de
 
 28. Eventos tratam sobre uma área do conhecimento e zero ou várias subáreas;
 
+29. Eventos possuem relação de indicação com zero ou um artigo científico;
 
+30. Um participante pode se inscrever em zero ou mais eventos;
 
-=====================================================================================================================================
+31. A inscrição de um participante em um evento gera um ingresso, contendo os dados: código, valor, status do pagamento ("aguardando aprovação", "aprovado" ou "recusado"), forma de pagamento e data da inscrição;
 
+32. Um evento gera um certificado único referente ao próprio evento para o participante que se inscreveu e participou;
 
+33. O certificado deve conter a carga horária total, calculada a partir do horário de inicio e horário de término do evento;
 
+34. Um participante pode possuir diversos certificados para vários eventos diferentes;
 
-23. Eventos científicos possuem relação de indicação com zero ou um artigo científico;
-
-24. Eventos científicos ocorrem em zero ou uma instituição de ensino;
-
-25. Um participante pode se inscrever em zero ou mais eventos;
-
-26. A inscrição de um participante em um evento gera um ingresso, contendo os dados: código, valor, status do pagamento ("aguardando aprovação", "aprovado" ou "recusado"), forma de pagamento e data da inscrição;
-
-27. Um evento gera um certificado único referente ao próprio evento para o participante que se inscreveu e participou;
-
-28. O certificado deve conter a carga horária total, calculada a partir do horário de inicio e horário de término do evento;
-
-29. Um evento é dado como encerrado se sua data de realização já se passou.
+35. Um evento é dado como encerrado se sua data de realização já se passou.
