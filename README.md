@@ -38,47 +38,60 @@ Como pretende-se otimizar e facilitar as consultas na base de dados que será de
 
 6. Artigos científicos contém título, resumo, arquivo (que é o artigo em si) e status ("aguardando aprovação", "aprovado" ou "recusado" - todos os artigos são inicialmente classificados como "aguardando aprovação");
 
-7. Artigos científicos possuem relação de autoria com participantes cadastrados na plataforma. Cada artigo possui um único autor ou vários autores;
+7. Autores podem publicar uma quantidade ilimitada de artigos;
 
-8. Artigos científicos são de uma única área do conhecimento e de zero ou várias subáreas;
+8. Artigos podem possuir um ou diversos autores;
 
-9. Um participante pode ter zero ou vários artigos publicados;
+9. Artigos científicos são de uma única área do conhecimento e de zero ou várias subáreas;
 
-10. Existe o administrador do sistema, que é um participante com privilégios especiais: pode classificar qualquer participante cadastrado como avaliador de artigos e/ou avaliador de eventos;
-11. Deve ser possível contabilizar a quantidade total de artigos aprovados e a quantidade total de artigos recusados pelos participantes avaliadores de artigos;
+10. O administrador pode classificar qualquer pessoa como avaliador de artigos e/ou avaliador de eventos;
 
-12. Deve ser possível contabilizar a quantidade total de eventos aprovados e a quantidade total de eventos recusados pelos participantes avaliadores de eventos;
+11. Avaliadores de artigos podem aceitar ou recusar artigos que estão aguardando aprovação;
 
-13. Deve haver o ranqueamento dos artigos científicos aprovados, a partir da conferência de zero a cinco estrelas pelos participantes;
+12. Avaliadores de eventos podem aceitar ou recusar eventos que estão aguardando aprovação;
 
-14. Participantes podem conferir estrelas a zero ou vários artigos;
+13. Deve ser apresentado pelos avaliadores motivos plausíveis caso um evento ou artigo seja recusado;
 
-15. O ranque de um artigo científico é calculado pela média de estrelas que o mesmo recebeu;
+14. Deve ser possível contabilizar a quantidade total de artigos aprovados e a quantidade total de artigos recusados pelos avaliadores de artigos;
 
-16. Organizações possuem os dados: CNPJ, nome, imagem (logo), telefone e descrição; 
+15. Deve ser possível contabilizar a quantidade total de eventos aprovados e a quantidade total de eventos recusados pelos avaliadores de eventos;
 
-17. O evento científico contém nome, tipo (congresso, conferência, curso, encontro, fórum, jornada, mesa-redonda, seminário, simpósio ou workshop), data de realização, horário de começo, horário de termino, endereço (país, estado, cidade, logradouro, bairro, CEP, número e complemento), data máxima de inscrição, descrição, valor, formas de pagamento (cartão de crédito, boleto ou transferência bancária) e número máximo de pariticipantes permitido;
+16. Deve haver o ranqueamento dos artigos científicos aprovados, a partir da conferência de zero a cinco estrelas pelos participantes;
 
-18. Participantes são responsáveis por zero ou vários eventos científicos;
+17. Participantes podem conferir estrelas a zero ou vários artigos;
 
-19. Organizações organizam zero ou vários eventos científicos;
+18. O ranque de um artigo científico é calculado pela média de estrelas que o mesmo recebeu;
 
-20. Eventos científicos são ministrados por um ou mais participantes;
+19. Organizações possuem os dados: CNPJ, nome, imagem (logo), telefone e descrição; 
 
-21. O(s) participante(s) que ministra(m) um evento é (são) considerado(s) palestrante(s);
+20. O evento científico contém nome, tipo (congresso, conferência, curso, encontro, fórum, jornada, mesa-redonda, seminário, simpósio ou workshop), data de realização, horário de começo, horário de termino, endereço (país, estado, cidade, logradouro, bairro, CEP, número e complemento), data máxima de inscrição, descrição, valor e número máximo de pariticipantes permitido;
 
-22. Eventos científicos tratam sobre uma área do conhecimento e zero ou várias subáreas;
+21. Formas de pagamento possuem um nome único;
 
-23. Eventos científicos possuem relação de indicação com zero ou um artigo científico;
+22. O evento deve ser criado por uma única pessoa responsável;
 
-24. Eventos científicos ocorrem em zero ou uma instituição de ensino;
+23. Eventos aceitam uma ou várias formas de pagamentos;
 
-25. Um participante pode se inscrever em zero ou mais eventos;
+24. Eventos podem ou não ocorrer em uma instituição de ensino;
 
-26. A inscrição de um participante em um evento gera um ingresso, contendo os dados: código, valor, status do pagamento ("aguardando aprovação", "aprovado" ou "recusado"), forma de pagamento e data da inscrição;
+25. Palestrantes ministram zero ou vários eventos;
 
-27. Um evento gera um certificado único referente ao próprio evento para o participante que se inscreveu e participou;
+26. Eventos são ministrados por um único palestrante ou por vários palestrantes;
 
-28. O certificado deve conter a carga horária total, calculada a partir do horário de inicio e horário de término do evento;
+27. Organizações organizam zero ou vários eventos;
 
-29. Um evento é dado como encerrado se sua data de realização já se passou.
+28. Eventos tratam sobre uma área do conhecimento e zero ou várias subáreas;
+
+29. Eventos possuem relação de indicação com zero ou um artigo científico;
+
+30. Um participante pode se inscrever em zero ou mais eventos;
+
+31. A inscrição de um participante em um evento gera um ingresso, contendo os dados: código, valor, status do pagamento ("aguardando aprovação", "aprovado" ou "recusado"), forma de pagamento e data da inscrição;
+
+32. Um evento gera um certificado único referente ao próprio evento para o participante que se inscreveu e participou;
+
+33. O certificado deve conter a carga horária total, calculada a partir do horário de inicio e horário de término do evento;
+
+34. Um participante pode possuir diversos certificados para vários eventos diferentes;
+
+35. Um evento é dado como encerrado se sua data de realização já se passou.
