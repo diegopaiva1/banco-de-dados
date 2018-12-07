@@ -5,7 +5,7 @@
 -- Dumped from database version 11.0 (Ubuntu 11.0-1.pgdg16.04+2)
 -- Dumped by pg_dump version 11.0 (Ubuntu 11.0-1.pgdg16.04+2)
 
--- Started on 2018-10-31 12:23:42 -03
+-- Started on 2018-11-20 12:33:21 -02
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -18,7 +18,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 6 (class 2615 OID 16423)
+-- TOC entry 5 (class 2615 OID 16423)
 -- Name: saec; Type: SCHEMA; Schema: -; Owner: diego
 --
 
@@ -28,8 +28,8 @@ CREATE SCHEMA saec;
 ALTER SCHEMA saec OWNER TO diego;
 
 --
--- TOC entry 3100 (class 0 OID 0)
--- Dependencies: 6
+-- TOC entry 3101 (class 0 OID 0)
+-- Dependencies: 5
 -- Name: SCHEMA saec; Type: COMMENT; Schema: -; Owner: diego
 --
 
@@ -132,7 +132,7 @@ CREATE SEQUENCE saec.area_conhecimento_id_seq
 ALTER TABLE saec.area_conhecimento_id_seq OWNER TO diego;
 
 --
--- TOC entry 3101 (class 0 OID 0)
+-- TOC entry 3102 (class 0 OID 0)
 -- Dependencies: 205
 -- Name: area_conhecimento_id_seq; Type: SEQUENCE OWNED BY; Schema: saec; Owner: diego
 --
@@ -188,7 +188,7 @@ CREATE SEQUENCE saec.artigo_id_seq
 ALTER TABLE saec.artigo_id_seq OWNER TO diego;
 
 --
--- TOC entry 3102 (class 0 OID 0)
+-- TOC entry 3103 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: artigo_id_seq; Type: SEQUENCE OWNED BY; Schema: saec; Owner: diego
 --
@@ -330,7 +330,7 @@ CREATE SEQUENCE saec.evento_id_seq
 ALTER TABLE saec.evento_id_seq OWNER TO diego;
 
 --
--- TOC entry 3103 (class 0 OID 0)
+-- TOC entry 3104 (class 0 OID 0)
 -- Dependencies: 214
 -- Name: evento_id_seq; Type: SEQUENCE OWNED BY; Schema: saec; Owner: diego
 --
@@ -368,7 +368,7 @@ CREATE SEQUENCE saec.forma_pagamento_id_seq
 ALTER TABLE saec.forma_pagamento_id_seq OWNER TO diego;
 
 --
--- TOC entry 3104 (class 0 OID 0)
+-- TOC entry 3105 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: forma_pagamento_id_seq; Type: SEQUENCE OWNED BY; Schema: saec; Owner: diego
 --
@@ -438,7 +438,7 @@ CREATE SEQUENCE saec.instituicao_id_seq
 ALTER TABLE saec.instituicao_id_seq OWNER TO diego;
 
 --
--- TOC entry 3105 (class 0 OID 0)
+-- TOC entry 3106 (class 0 OID 0)
 -- Dependencies: 197
 -- Name: instituicao_id_seq; Type: SEQUENCE OWNED BY; Schema: saec; Owner: diego
 --
@@ -1160,7 +1160,17 @@ ALTER TABLE ONLY saec.responsavel
     ADD CONSTRAINT responsavel_cpf_fkey FOREIGN KEY (cpf) REFERENCES saec.participante(cpf);
 
 
--- Completed on 2018-10-31 12:23:43 -03
+--
+-- TOC entry 3100 (class 0 OID 0)
+-- Dependencies: 8
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: diego
+--
+
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2018-11-20 12:33:22 -02
 
 --
 -- PostgreSQL database dump complete
