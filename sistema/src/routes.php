@@ -1,14 +1,6 @@
 <?php
 
-use Slim\Http\Request;
-use Slim\Http\Response;
-
-// Routes
-
-$app->get('/[{name}]', function (Request $request, Response $response, array $args) {
-    $query = $this->db->prepare("SELECT * FROM participante");
-    $query->execute();
-
-    $result = $query->fetchAll();
-    print_r($result);
-});
+// Instituicao
+$app->get('/instituicao', 'InstituicaoController:index')->setName('instituicao.index');
+$app->get('/instituicao/new', 'InstituicaoController:create')->setName('instituicao.create');
+$app->post('/instituicao/new', 'InstituicaoController:store')->setName('instituicao.store');

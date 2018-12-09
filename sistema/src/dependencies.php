@@ -11,9 +11,8 @@ $container['renderer'] = function ($c) {
 
 // Register Twig View helper
 $container['view'] = function ($c) {
-    $view = new \Slim\Views\Twig('path/to/templates', [
-        'cache' => 'path/to/cache'
-    ]);
+    $settings = $c->get('settings')['renderer'];
+    $view = new \Slim\Views\Twig($settings['template_path']);
     
     // Instantiate and add Slim specific extension
     $router = $c->get('router');
@@ -34,14 +33,20 @@ $container['logger'] = function ($c) {
 
 $container['db'] = function($c) {
     $settings = $c->get('settings')['db'];
+
     // PDO first string paramater 
     $dsn = $settings['driver'] . ':host=' . $settings['host'] . ';port=' .
            $settings['port'] . ';dbname=' . $settings['database'];
 
     try {
-        return new PDO($dsn, $settings['username'], $settings['password']);
+        return new PDO($dsn, $settings['username'], $settings['password'], 
+                       [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
     }
     catch(PDOException $e) {
         throw new PDOException($e);
-    } 
+    }    
+};
+
+$container['InstituicaoController'] = function ($c) {
+    return new App\Controllers\InstituicaoController($c);
 };

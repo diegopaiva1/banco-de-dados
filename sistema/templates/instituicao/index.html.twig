@@ -1,0 +1,23 @@
+{% extends 'master.html.twig' %}
+
+{% block title %} Instituições de Ensino {% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <table class="table is-bordered is-striped">
+    <thead>
+      <th class="has-text-centered">Sigla</th>
+      <th class="has-text-centered">Nome</th>
+    </thead>
+    <tbody>
+      {% for instituicao in instituicoes %}
+      <tr>
+          <td>{{ instituicao.sigla }}</td>
+          <td>{{ instituicao.nome }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
