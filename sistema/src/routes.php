@@ -6,9 +6,9 @@ use Slim\Http\Response;
 // Routes
 
 $app->get('/[{name}]', function (Request $request, Response $response, array $args) {
-    // Sample log message
-    $this->logger->info("Slim-Skeleton '/' route");
+    $query = $this->db->prepare("SELECT * FROM participante");
+    $query->execute();
 
-    // Render index view
-    return $this->renderer->render($response, 'index.phtml', $args);
+    $result = $query->fetchAll();
+    print_r($result);
 });
