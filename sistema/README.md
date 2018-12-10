@@ -5,7 +5,9 @@ Este é o protótipo do Sistema integrado com o Banco de Dados.
 ## Instalação
 
 `git clone https://github.com/diegopaiva1/banco-de-dados.git`
+
 `cd banco-de-dados/sistema`
+
 `composer install`
 
 ## Rodando em Servidor Local
