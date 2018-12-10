@@ -62,3 +62,7 @@ $container['InscricaoController'] = function ($c) {
 $container['ArtigoController'] = function ($c) {
     return new App\Controllers\ArtigoController($c);
 };
+
+$container['AreaConhecimentoController'] = function ($c) {
+    return new App\Controllers\AreaConhecimentoController($c);
+};

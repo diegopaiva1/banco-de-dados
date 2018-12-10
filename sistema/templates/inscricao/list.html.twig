@@ -4,11 +4,11 @@
 
 {% block breadcrumb %}
 <li><a href="#">Inscrições</a></li>
-<li class="is-active"><a href="{{ path_for('inscricao.index') }}" aria-current="page">Visualizar</a></li>
+<li class="is-active"><a href="{{ path_for('inscricao.index') }}" aria-current="page">{{ evento }}</a></li>
 {% endblock %}
 
 {% block content %}
-<h1 class="label">{{ evento }}</h1>
+<h1 class="label">Inscritos</h1>
 <table class="table is-bordered is-striped is-fullwidth">
     <thead>
       <th>Código</th>

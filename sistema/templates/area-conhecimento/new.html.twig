@@ -1,0 +1,53 @@
+{% extends 'master.html.twig' %}
+
+{% block title %} Nova Instituição de Ensino {% endblock %}
+
+{% block breadcrumb %}
+<li><a href="#">Instituições</a></li>
+<li class="is-active"><a href="{{ path_for('instituicao.create') }}" aria-current="page">Novo</a></li>
+{% endblock %}
+
+{% block css %}
+<style>
+  .label {
+    margin-bottom: 3em;
+  } 
+</style> 
+{% endblock %}
+
+{% block content %}
+<h1 class="label">Inserir nova área do conhecimento</h1>
+<form action="{{ path_for('area.store')}}" method="post">
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <div class="field">
+        <label class="label">Nome</label>
+        <div class="control">
+          <input class="input" name="nome" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+        <label class="label">Área pai</label>
+        <div class="select">
+          <select name = "area_pai">
+            <option value="">Nenhuma</option>
+            {% for area in areas %}
+            <option value="{{ area.id }}">{{ area.nome }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <div class="control">
+      <button type="submit" class="button is-link">Cadastrar</button>
+    </div>
+    <div class="control">
+      <a class="button is-text" href="{{ path_for('dashboard.index') }}">Cancelar</a>
+    </div>
+  </div>
+</form>
+{% endblock %}

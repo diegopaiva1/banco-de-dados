@@ -15,3 +15,7 @@ $app->post('/instituicoes/new', 'InstituicaoController:store')->setName('institu
 // Artigo
 $app->get('/artigos', 'ArtigoController:index')->setName('artigo.index');
 $app->get('/artigos/ranking', 'ArtigoController:ranking')->setName('artigo.ranking');
+
+// Área do conhecimento
+$app->get('/areas/new', 'AreaConhecimentoController:create')->setName('area.create');
+$app->post('/areas/new', 'AreaConhecimentoController:store')->setName('area.store');
