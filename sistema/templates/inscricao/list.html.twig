@@ -22,7 +22,7 @@
           <td>{{ inscricao.codigo }}</td>
           <td>{{ inscricao.cpf }}</td>
           <td>{{ inscricao.nome }}</td>
-          <td>{{ inscricao.data_inscricao }}</td>
+          <td>{{ inscricao.data_inscricao | date("d/m/Y H:i:s") }}</td>
       </tr>
       {% endfor %}
     </tbody>

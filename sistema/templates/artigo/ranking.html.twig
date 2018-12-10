@@ -1,0 +1,26 @@
+{% extends 'master.html.twig' %}
+
+{% block title %} Inscrições {% endblock %}
+
+{% block breadcrumb %}
+<li><a href="#">Artigos</a></li>
+<li class="is-active"><a href="{{ path_for('artigo.ranking') }}" aria-current="page">Ranking</a></li>
+{% endblock %}
+
+{% block content %}
+<h1 class="label">Artigos mais bem avaliados</h1>
+<table class="table is-bordered is-striped is-fullwidth">
+    <thead>
+      <th>Titulo</th>
+      <th>Média de Estrelas</th>
+    </thead>
+    <tbody>
+      {% for artigo in ranking %}
+      <tr>
+          <td>{{ artigo.titulo }}</td>
+          <td>{{ artigo.avg | number_format(2, ',', '.') }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

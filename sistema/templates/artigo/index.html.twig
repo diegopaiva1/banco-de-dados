@@ -1,0 +1,39 @@
+{% extends 'master.html.twig' %}
+
+{% block title %} Inscrições {% endblock %}
+
+{% block breadcrumb %}
+<li><a href="#">Artigos</a></li>
+<li class="is-active"><a href="{{ path_for('artigo.index') }}" aria-current="page">Visualizar</a></li>
+{% endblock %}
+
+{% block content %}
+  <h1 class="label">Artigos publicados nos últimos 30 dias: </h1>
+  {% for artigo in artigos %}
+    {% if (loop.index - 1) % 3 == 0 %}
+    <div class="columns">
+    {% endif %}
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            “{{ artigo.titulo | slice(0, 50) ~ '...' }}”
+          </p>
+          <p class="subtitle">
+            Publicado em: {{ artigo.data_publicacao | date("d/m/Y") }}
+          </p>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              <a href="#">Acessar</a>
+            </span>
+          </p>
+        </footer>
+      </div>
+    </div>
+    {% if loop.index % 3 == 0 %}
+    </div>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
