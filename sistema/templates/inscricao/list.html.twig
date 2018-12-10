@@ -1,0 +1,30 @@
+{% extends 'master.html.twig' %}
+
+{% block title %} Inscrições {% endblock %}
+
+{% block breadcrumb %}
+<li><a href="#">Inscrições</a></li>
+<li class="is-active"><a href="{{ path_for('inscricao.index') }}" aria-current="page">Visualizar</a></li>
+{% endblock %}
+
+{% block content %}
+<h1 class="label">{{ evento }}</h1>
+<table class="table is-bordered is-striped is-fullwidth">
+    <thead>
+      <th>Código</th>
+      <th>CPF</th>
+      <th>Nome</th>
+      <th>Data da inscrição</th>
+    </thead>
+    <tbody>
+      {% for inscricao in inscricoes %}
+      <tr>
+          <td>{{ inscricao.codigo }}</td>
+          <td>{{ inscricao.cpf }}</td>
+          <td>{{ inscricao.nome }}</td>
+          <td>{{ inscricao.data_inscricao }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
