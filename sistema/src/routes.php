@@ -1,6 +1,8 @@
 <?php
 
+$app->get('/', 'DashboardController:index')->setName('dashboard.index');
+
 // Instituicao
-$app->get('/instituicao', 'InstituicaoController:index')->setName('instituicao.index');
-$app->get('/instituicao/new', 'InstituicaoController:create')->setName('instituicao.create');
-$app->post('/instituicao/new', 'InstituicaoController:store')->setName('instituicao.store');
+$app->get('/instituicoes', 'InstituicaoController:index')->setName('instituicao.index');
+$app->get('/instituicoes/new', 'InstituicaoController:create')->setName('instituicao.create');
+$app->post('/instituicoes/new', 'InstituicaoController:store')->setName('instituicao.store');

@@ -2,36 +2,47 @@
 
 {% block title %} Nova Instituição de Ensino {% endblock %}
 
-{% block content %}
-<div class="container">
-  <form action="{{ path_for('instituicao.store')}}" method="post">
-    <div class="columns">
-      <div class="column is-one-quarter">
-        <div class="field">
-          <label class="label">Sigla</label>
-          <div class="control">
-            <input class="input" name="sigla" type="text">
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="field">
-          <label class="label">Nome</label>
-          <div class="control">
-            <input class="input" name="nome" type="text">
-          </div>
-        </div>
-      </div>
-    </div>
+{% block breadcrumb %}
+<li><a href="#">Instituições</a></li>
+<li class="is-active"><a href="{{ path_for('instituicao.create') }}" aria-current="page">Novo</a></li>
+{% endblock %}
 
-    <div class="field is-grouped">
-      <div class="control">
-        <button type="submit" class="button is-link">Cadastrar</button>
-      </div>
-      <div class="control">
-        <button class="button is-text">Cancelar</button>
+{% block css %}
+<style>
+  .label {
+    margin-bottom: 3em;
+  } 
+</style> 
+{% endblock %}
+
+{% block content %}
+<h1 class="label">Inserir nova instituição de ensino</h1>
+<form action="{{ path_for('instituicao.store')}}" method="post">
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <div class="field">
+        <label class="label">Sigla</label>
+        <div class="control">
+          <input class="input" name="sigla" type="text">
+        </div>
       </div>
     </div>
-  </form>
-</div>
+    <div class="column">
+      <div class="field">
+        <label class="label">Nome</label>
+        <div class="control">
+          <input class="input" name="nome" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <div class="control">
+      <button type="submit" class="button is-link">Cadastrar</button>
+    </div>
+    <div class="control">
+      <button class="button is-text">Cancelar</button>
+    </div>
+  </div>
+</form>
 {% endblock %}

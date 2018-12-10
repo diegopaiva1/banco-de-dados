@@ -4,10 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{% block title %}  {% endblock %}</title>
+  <title>{% block title %} {% endblock %}</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  {% block css %} {% endblock %}
 </head>
 <body>
-  {% block content %} {% endblock %}
+  <div class="columns">
+    <div class="column is-one-quarter">
+      {% include 'menu.html.twig' %}
+    </div>
+    <div class="column is-two-thirds" id="content">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="{{ path_for ('dashboard.index') }}">Dashboard</a></li>
+          {% block breadcrumb %} {% endblock %}
+        </ul>
+      </nav>
+      {% block content %} {% endblock %}
+    </div>
+  </div>
 </body>
 </html>

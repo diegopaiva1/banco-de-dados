@@ -2,22 +2,24 @@
 
 {% block title %} Instituições de Ensino {% endblock %}
 
-{% block content %}
-<div class="container">
+{% block breadcrumb %}
+<li><a href="#">Instituições</a></li>
+<li class="is-active"><a href="{{ path_for('instituicao.index') }}" aria-current="page">Visualizar</a></li>
+{% endblock %}
 
-  <table class="table is-bordered is-striped">
-    <thead>
-      <th class="has-text-centered">Sigla</th>
-      <th class="has-text-centered">Nome</th>
-    </thead>
-    <tbody>
-      {% for instituicao in instituicoes %}
-      <tr>
-          <td>{{ instituicao.sigla }}</td>
-          <td>{{ instituicao.nome }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+{% block content %}
+<table class="table is-bordered is-striped is-fullwidth">
+  <thead>
+    <th>Sigla</th>
+    <th>Nome</th>
+  </thead>
+  <tbody>
+    {% for instituicao in instituicoes %}
+    <tr>
+        <td>{{ instituicao.sigla }}</td>
+        <td>{{ instituicao.nome }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}

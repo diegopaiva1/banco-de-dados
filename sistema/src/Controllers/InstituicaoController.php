@@ -29,6 +29,8 @@ class InstituicaoController extends Controller
 
         $query = "INSERT INTO instituicao (sigla, nome) VALUES (?, ?)";
         
-        return $this->db->prepare($query)->execute($params);
+        $this->db->prepare($query)->execute($params);
+
+        return $response->withRedirect($this->router->pathFor('instituicao.create'));
     }
 }

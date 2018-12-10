@@ -50,3 +50,7 @@ $container['db'] = function($c) {
 $container['InstituicaoController'] = function ($c) {
     return new App\Controllers\InstituicaoController($c);
 };
+
+$container['DashboardController'] = function ($c) {
+    return new App\Controllers\DashboardController($c);
+};
